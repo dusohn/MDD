@@ -1,4 +1,3 @@
-import MDD
 from tkinter import *
 
 def btncmd():

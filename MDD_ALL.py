@@ -64,22 +64,3 @@ def MDD_G(start_year, symbol):
     data.insert(11, 'Mean3', avg)
 
     return data
-
-
-def GetName(symbol):
-    import numpy as np
-    import pandas as pd
-    import yfinance as yf
-
-    Location = 'D:/'
-    File = 'Ticker.xlsx'
-
-    data_pd = pd.read_excel('{}/{}'.format(Location, File), header=0, index_col=None, names=None)
-    find_pd = data_pd[data_pd['Ticker'] == symbol]
-
-    if find_pd.size > 0:
-        Name = find_pd.iloc[0,1]
-    else:
-        Name = yf.Ticker(symbol).info["shortName"]
-
-    return Name

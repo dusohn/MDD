@@ -1,0 +1,19 @@
+{
+  "name": "tsla-mdd",
+  "private": true,
+  "type": "module",
+  "description": "Show Tesla (TSLA) maximum drawdown from daily closes.",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "tsx --test bot/lib/mdd.test.ts",
+    "dev": "bdk dev"
+  },
+  "dependencies": {
+    "@cursor/bdk": "^0.2.23",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "6.0.3"
+  }
+}
